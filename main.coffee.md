@@ -17,7 +17,7 @@ Facebook
         # Attach the fb-root element to the body
         fbRoot = document.createElement "div"
         fbRoot.id = "fb-root"
-        document.body.insertBefore(fbRoot)
+        document.body.appendChild(fbRoot)
 
         # Load the SDK asynchronously
         do (d=document, s='script', id='facebook-jssdk', js=undefined) ->
