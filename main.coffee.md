@@ -34,21 +34,25 @@ Pass an array of scope permissions and a function to call once those permissions
 have been granted.
 
       requiringPermissions: (scopes, fn) ->
-        FB.getLoginStatus (response) ->
-          if response.status is 'connected'
+        wrapped = (fn) ->
+          ({authResponse}) ->
+            fn(authResponse)
+
+        FB.getLoginStatus ({status, authResponse}) ->
+          if status is 'connected'
             FB.api '/me/permissions', ({data:[permissions]}) ->
 
               permissionsToPrompt = scopes.filter (permission) ->
                 !permissions[permission]
 
               if permissionsToPrompt.length
-                FB.login fn,
+                FB.login wrapped(fn),
                   scope: permissionsToPrompt.join(',')
               else
-                fn(response.authResponse)
-          else if response.status is 'not_authorized'
-            FB.login fn,
+                fn(authResponse)
+          else if status is 'not_authorized'
+            FB.login wrapped(fn),
               scope: scope
           else
-            FB.login fn,
+            FB.login wrapped(fn),
               scope: scope
