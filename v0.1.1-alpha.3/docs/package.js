@@ -31,7 +31,7 @@
     "pixie.cson": {
       "path": "pixie.cson",
       "mode": "100644",
-      "content": "version: \"0.1.1-alpha.3\"\nentryPoint: \"main\"\nremoteDependencies: [\n  \"http://strd6.github.io/require/v0.2.2.js?\"\n]\n",
+      "content": "version: \"0.1.1-alpha.3\"\nentryPoint: \"main\"\nremoteDependencies: [\n  \"http://strd6.github.io/require/v0.2.2.js\"\n]\n",
       "type": "blob"
     }
   },
@@ -48,14 +48,14 @@
     },
     "pixie": {
       "path": "pixie",
-      "content": "module.exports = {\"version\":\"0.1.1-alpha.3\",\"entryPoint\":\"main\",\"remoteDependencies\":[\"http://strd6.github.io/require/v0.2.2.js?\"]};",
+      "content": "module.exports = {\"version\":\"0.1.1-alpha.3\",\"entryPoint\":\"main\",\"remoteDependencies\":[\"http://strd6.github.io/require/v0.2.2.js\"]};",
       "type": "blob"
     }
   },
   "entryPoint": "main",
   "dependencies": {},
   "remoteDependencies": [
-    "http://strd6.github.io/require/v0.2.2.js?"
+    "http://strd6.github.io/require/v0.2.2.js"
   ],
   "progenitor": {
     "url": "http://strd6.github.io/editor/"
