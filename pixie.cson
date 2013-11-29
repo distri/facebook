@@ -1,5 +1,1 @@
-version: "0.1.1-alpha.3"
-entryPoint: "main"
-remoteDependencies: [
-  "http://strd6.github.io/require/v0.2.2.js"
-]
+version: "0.1.1"
